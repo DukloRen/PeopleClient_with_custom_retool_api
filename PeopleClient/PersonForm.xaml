@@ -1,0 +1,47 @@
+﻿<Window x:Class="PeopleClient.PersonForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PeopleClient"
+        mc:Ignorable="d"
+        Title="PersonForm" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Label Content="Teljes név:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Grid.Row="1" Content="Apuka lelépett:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Grid.Row="2" Content="Gyerekek száma:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Grid.Row="3" Content="Email:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Grid.Row="4" Content="Telefonszám:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+        <TextBox x:Name="nameInput" Grid.Column="1" VerticalAlignment="Center" />
+        <CheckBox x:Name="fatherInput" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" />
+        <TextBox x:Name="childrenInput" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" />
+        <TextBox x:Name="emailInput" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" />
+        <TextBox x:Name="phoneInput" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" />
+
+        <Button x:Name="addButton" Grid.Column="1" Grid.Row="5" Content="Hozzáad" VerticalAlignment="Top" Margin="0,15,0,0" Click="Add_Click" />
+        <Button x:Name="updateButton" Visibility="Collapsed" Grid.Column="1" Grid.Row="3" Content="Módosít" VerticalAlignment="Top" Margin="0,15,0,0" Click="Update_Click"  />
+        <!--
+            <StackPanel Grid.Row="3">
+                <Button Content="1" />
+                <Button Content="2" Visibility="Collapsed"/>
+                <Button Content="3" />
+                <Button Content="4" />
+                <Button Content="5" />
+            </StackPanel>
+        -->
+    </Grid>
+</Window>

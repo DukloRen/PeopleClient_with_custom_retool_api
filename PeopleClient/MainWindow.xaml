@@ -1,0 +1,20 @@
+﻿<Window x:Class="PeopleClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PeopleClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button Content="Hozzáad" Width="100" Click="Add_Click"/>
+            <Button Content="Módosít" Width="100" Click="Update_Click"/>
+            <Button Content="Törlés" Width="100" Click="Delete_Click" />
+        </StackPanel>
+        
+        <DataGrid x:Name="peopleTable" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True"/>
+
+    </DockPanel>
+</Window>
